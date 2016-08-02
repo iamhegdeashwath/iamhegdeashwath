@@ -1,0 +1,100 @@
+<div id="contact">
+    <div class="row">
+        <div class="col-md-7">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-marker
+                        coords="marker.coords"
+                        options="marker.options"
+                        idkey="marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+        <div class="address-details col-md-5">
+            <div class="contact-details row">
+                <div class="col-md-12">
+                    <h3>ASHWATH SURESH HEGDE</h3>
+                    <p>
+                        3423 S. Wallace St.<br>
+                        Unit 2F<br>
+                        Chicago, Illinois - 60616<br>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-details row">
+                <div class="col-md-12">
+                    <p>
+                        hegde.ashwath1@gmail.com<br>
+                        asureshh@hawk.iit.edu<br>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-details row">
+                <div class="col-md-12">
+                    <p>
+                        <span>Mobile: </span>+1&nbsp;(312)&nbsp;972&nbsp;-&nbsp;9557
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reach-me">
+        <h3>Can also find me on</h3>
+        <div class="links">
+            <a href="mailto:hegde.ashwath1@gmail.com" title="Ashwath Hegde | Email" target="_self">
+                <img src="images/reach_me/email.ico" alt="Email Icon">
+            </a>
+            <a href="https://www.facebook.com/ashwath1992" title="Ashwath Hegde | Facebook" target="_blank">
+                <img src="images/reach_me/facebook.png" alt="Facebook Icon">
+            </a>
+            <a href="https://twitter.com/HegdeAshwath" title="Ashwath Hegde | Twitter" target="_blank">
+                <img src="images/reach_me/twitter.png" alt="Twitter Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/hegde0209" title="Ashwath Suresh Hegde | LinkedIn" target="_blank">
+                <img src="images/reach_me/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.instagram.com/hegde92" title="Ashwath Hegde | Instagram" target="_blank">
+                <img src="images/reach_me/instagram.png" alt="Instagram Icon">
+            </a>
+            <a href="https://plus.google.com/+AshwathSH" title="+AshwathSH | Google+" target="_blank">
+                <img src="images/reach_me/googleplus.png" alt="Google+ Icon">
+            </a>
+            <a href="skype:hegde.ashwath1?call" title="Call hegde.ashwath1" target="_blank">
+                <img src="images/reach_me/skype.png" alt="Skype Icon">
+            </a>
+        </div>
+    </div>
+    <div class="message-form">
+        <div class="form col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4 col-xs-12">
+            <div class="contact-header">
+                <h1>lets work together</h1>
+                <h5>I COULDN'T HAVE ASKED FOR MORE THAN THIS</h5>
+            </div>
+            <form name="contactForm" novalidate ng-submit="processForm(formData)" autocomplete="off">
+                <div id="name-group" class="form-group">
+                    <input type="text" name="contactName" class="form-control" placeholder="Name*" ng-model="formData.contactName" required>
+                </div>
+                <div id="email-group" class="form-group">
+                    <input type="email" name="contactEmail" ng-blur="visitedEmail = true" class="form-control" placeholder="Email*" ng-model="formData.contactEmail" required>
+                    <div ng-show="contactForm.contactEmail.$dirty && contactForm.contactEmail.$invalid && visitedEmail">
+                        <p class="error-message" ng-show="contactForm.contactEmail.$error.email">Invalid Email Address</p>
+                    </div>
+                </div>
+                <div id="phone-group" class="form-group">
+                    <input type="tel" name="contactPhone" class="form-control" placeholder="Phone*" phone-input ng-model="formData.contactPhone" required>
+                </div>
+                <div id="content-group" class="form-group">
+                    <textarea  rows="5" cols="50" name="contactMessage" class="form-control" placeholder="Message" ng-model="formData.contactMessage"></textarea>
+                </div>
+                <div class="btn-block">
+                    <button type="submit" ng-disabled="!contactForm.$dirty" class="btn btn-success btn-lg">
+                        <span class="glyphicon glyphicon-share-alt"></span> Submit!
+                    </button>
+                    <button ng-disabled="!contactForm.$dirty" type="reset" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-refresh"></span> Reset!
+                    </button>
+                </div>
+            </form>
+        </div>
+        <toaster-container toaster-options="{'time-out': 5000, 'close-button':true, 'animation-class': 'toast-bottom-right'}"></toaster-container>
+    </div>
+</div>

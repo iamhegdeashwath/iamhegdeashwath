@@ -1,0 +1,829 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+#site-wrap {
+  max-width: 1200px;
+  margin: auto;
+  clear: both;
+  position: relative;
+  height: 100%;
+}
+
+#main-content {
+  margin-top: 8.5rem;
+}
+
+.navbar {
+  margin-bottom: 0!important;
+  font-family: 'PT Serif', serif;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  .navbar-toggle {
+    padding-top: 0.9rem;
+    margin-right: 0!important;
+  }
+  .navbar-header {
+    padding: 1.2rem 0;
+  }
+  ul {
+    font-size: 16px;
+  }
+  li {
+    outline: 0;
+    vertical-align: middle;
+    padding: 0.5rem;
+    margin-right: 3rem;
+    color: #c4c4c4;
+    cursor: pointer;
+    &:hover {
+      color: black;
+    }
+  }
+  .active {
+    color: black;
+  }
+  a div {
+    display: inline-block;
+    vertical-align: bottom;
+    img {
+      width: 30px;
+      height: 50px;
+    }
+    .headertext {
+      vertical-align: bottom;
+      padding-bottom: 1rem;
+      padding-left: 0.5rem;
+      .name {
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .position {
+        font-size: 12px;
+        font-family: 'PT Serif', serif;
+        color: #8f8f8f;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  overflow: hidden!important;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.navbar-inverse {
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+}
+
+.navbar-inverse .navbar-toggle {
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #f7f7f7;
+}
+
+.navbar-inverse .navbar-collapse {
+  border-color: #D2CFCF;
+}
+
+#home {
+  padding-top: 30%;
+  background: url("../images/home_background.jpg") no-repeat 100% 100% ;
+  img {
+    width: 100%;
+  }
+}
+
+#about, #skills, #projects, #contact {
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+
+#about {
+  h1 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  .education {
+    padding-top: 3rem;
+  }
+  .university-heading {
+    text-align: center;
+  }
+  .university-logo-iit {
+    padding: 2rem 0 0;
+    text-align: right;
+  }
+  .university-logo-vtu {
+    padding: 1rem 0 0;
+    text-align: right;
+  }
+  .whoami {
+    h1 {
+      margin-top: 0;
+    }
+  }
+  .grad-details {
+    padding-top: 2rem;
+    padding-bottom: 0;
+    h5 {
+      margin-top: 0;
+    }
+  }
+  .iitChicago {
+    width: 70px;
+    height: 70px;
+  }
+  .vtu {
+    height: 80px;
+    width: 80px;
+  }
+  .row {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  font-family: 'PT Serif', serif;
+  h1 {
+    font-weight: 700;
+    text-align: center;
+  }
+  .degree, .company-name {
+    color: #124e76;
+  }
+  p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 3.75rem;
+  }
+}
+
+#skills {
+  text-align: center;
+  .web-technologies h2 {
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  img {
+    height: 95px;
+    width: 95px;
+    margin: 1.5rem;
+    &:hover {
+      animation: bounce 1s;
+    }
+  }
+  .test-tools {
+    img:last-child {
+      width: 250px;
+    }
+  }
+  .frameworks, .database {
+    img {
+      width: 250px;
+    }
+  }
+  .linux-family {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+#projects {
+  font-family: 'PT Serif', serif;
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  .professional-experience {
+    h5 {
+      margin-top: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #838383;
+    }
+    h4 {
+      color: #124e76;
+      font-size: 22px;
+    }
+    .bbTransact {
+      padding-top: 3rem;
+      padding-bottom: 1.5rem;
+    }
+    .egen {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      width: 80px;
+      height: 80px;
+    }
+    .edla {
+      width: 250px;
+    }
+    .work-description {
+      text-align: justify;
+      margin: auto;
+      font-family: 'Montserrat', sans-serif;
+      max-width: 450px;
+      padding-bottom: 2rem;
+    }
+    .row {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      .col-md-6:first-child {
+        margin-bottom: 3rem;
+      }
+    }
+    .col-md-6, .col-md-12 {
+      text-align: center;
+    }
+  }
+  .academic-projects {
+    div {
+      padding-top: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+      text-align: justify;
+      h4 {
+        color: #124e76;
+        font-size: 18px;
+      }
+    }
+  }
+  .other-projects {
+    text-align: center;
+    padding-top: 0.5rem;
+    h4 {
+      color: #124e76;
+      font-size: 18px;
+    }
+    img {
+      margin-top: 1rem;
+      width: 50px;
+      height: 50px;
+      &:hover {
+        animation: bounce 1s;
+      }
+    }
+    .github, .plunker {
+      display: inline-block;
+    }
+    .github {
+      margin-right: 5rem;
+    }
+    .plunker {
+      margin-left: 5rem;
+    }
+  }
+}
+#experience-modal {
+  .experience-modal-header {
+    h3 {
+      text-align: center;
+      font-family: 'PT Serif', serif;
+      font-size: 24px;
+      margin: 0;
+      font-weight: bold;
+    }
+    h3.egen {
+      margin-left: -1rem;
+    }
+    h5 {
+      margin: 0.5rem 0 0 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #838383;
+    }
+    img.bbTransact-company-logo {
+      margin: 0.5rem 0;
+      width: 125px;
+    }
+    img.edla-company-logo {
+      margin: 1.5rem 0;
+      width: 200px;
+      height: 30px;
+    }
+    img.egen-company-logo {
+      width: 50px;
+      height: 50px;
+    }
+    .company-header, .company-logo {
+      text-align: center;
+    }
+  }
+  .project-role {
+    text-align: center;
+    border-bottom: 0.1rem solid #c3c3c3;
+  }
+  .modal-separator {
+    background-color: #c3c3c3;
+    height: 0.1rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .experience-modal-body {
+    padding-top: 2rem;
+    p {
+      text-align: justify;
+      margin: auto;
+    }
+    h5 {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    span b {
+      text-decoration: underline;
+    }
+  }
+}
+
+.modal {
+  text-align: center;
+}
+div.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+div.modal-close {
+  margin-right: -4.5rem;
+  margin-top: -5rem;
+  cursor: pointer;
+  position: relative;
+  span {
+    font-size: 21.5px;
+    outline: 0;
+    background-color: white;
+    border-radius: 50%;
+  }
+}
+.modal-content {
+  padding: 4rem;
+}
+
+#contact {
+  .angular-google-map-container {
+    height: 400px;
+  }
+  .address-details {
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .contact-details {
+    margin: 0;
+    font-family: 'PT Serif', serif;
+    h3 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    p {
+      padding-top: 1rem;
+      font-size: 18px;
+      font-weight: 400;
+    }
+    i, p {
+      display: inline-block;
+    }
+  }
+  .message-form {
+    background: url("../images/contact.jpg") no-repeat 100% 100%;
+    margin-top: 5rem;
+    display: flex;
+    .form {
+      padding: 1.8rem;
+      .error-message {
+        color: #a94442;
+      }
+      .has-error .form-control {
+        border-color: #a94442;
+      }
+    }
+    h1 {
+      margin-top: 0;
+    }
+  }
+  .reach-me {
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    display: inline-block;
+    h3 {
+      font-family: 'PT Serif', serif;
+      color: #124e76;
+      margin: 0 0 2rem;
+    }
+    a:hover {
+      text-decoration: none!important;
+      color: transparent!important;
+    }
+    .links {
+      line-height: 7rem;
+    }
+  }
+  img {
+    cursor: pointer;
+    margin-right: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.btn[disabled] {
+  cursor: default;
+  &:focus, &:active {
+    outline: 0;
+  }
+}
+
+.help-block {
+  margin-bottom: 0;
+}
+
+.btn-block {
+  text-align: center;
+}
+
+.btn-success {
+  margin-bottom: 1rem;
+}
+
+.btn-success, .btn-info {
+  width: 100%!important;
+  &:focus, &:active {
+    outline: 0;
+  }
+}
+
+.contact-header {
+  text-align: center;
+  h1 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 9px;
+  }
+}
+
+.glyphicon {
+  top: 2px;
+  font-size: 16px;
+}
+
+.animation {
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-name: zoomOut;
+  -webkit-animation-name: zoomOut;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+@keyframes zoomOut{
+  0%{opacity:0;
+    -webkit-transform:scale3d(0.3, 0.3, 0.3);
+    transform:scale3d(0.3, 0.3, 0.3)}
+  50%{opacity:1}
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:2s;
+  -moz-animation-duration:2s;
+  animation-duration:2s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+@media (min-width: 380px) {
+  .navbar {
+    .navbar-toggle {
+      margin-right: 1.5rem!important;
+      padding-top: 1.5rem;
+    }
+    a div {
+      img {
+        width: 50px;
+        height: 70px;
+      }
+      .headertext {
+        .name {
+          font-size: 18px;
+        }
+        .position {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  #home {
+    padding-top: 15%;
+  }
+  #about {
+    .grad-details {
+      padding-top: 4rem;
+      padding-bottom: 0;
+    }
+    .university-logo-iit, .university-logo-vtu {
+      padding: 2rem 2rem;
+    }
+  }
+  #contact {
+    .message-form {
+      .form {
+        padding: 3.5rem;
+      }
+    }
+  }
+  .btn-success {
+    margin-bottom: 0;
+  }
+  .btn-success, .btn-info {
+    width: 48.5%!important;
+  }
+  .contact-header {
+    h5 {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (min-width: 560px) {
+  #home {
+    padding-top: 8%;
+  }
+  #about {
+    p {
+      font-size: 22px;
+      line-height: 4rem;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    .university-logo-iit, .university-logo-vtu {
+      padding: 0 2rem;
+    }
+    .iitChicago {
+      width: 100px;
+      height: 100px;
+    }
+    .vtu {
+      height: 125px;
+      width: 125px;
+    }
+  }
+  #projects {
+    h1 {
+      font-size: 36px;
+    }
+    .academic-projects div h4, .other-projects h4 {
+      font-size: 22px;
+    }
+    .professional-experience .edla {
+      width: 320px;
+    }
+  }
+  .navbar {
+    li {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+  #skills {
+    h2 {
+      font-size: 30px;
+      text-align: left;
+    }
+    img {
+      height: 125px;
+      width: 125px;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  #experience-modal {
+    .experience-modal-header {
+      .company-header, .company-logo {
+        display: inline-block;
+      }
+      .company-header {
+        text-align: left;
+      }
+      .company-logo {
+        float: right;
+      }
+    }
+  }
+  #home {
+    padding-top: 0;
+    background: none;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+  .navbar ul {
+    padding: 1.2rem 0;
+    font-size: 22px;
+  }
+  .contact-header {
+    text-align: left;
+    h1 {
+      font-size: 36px;
+    }
+    h5 {
+      font-size: 14px;
+    }
+  }
+  div.modal-dialog {
+    width: 70%;
+  }
+}
+
+@media (min-width: 812px) {
+  #experience-modal {
+    .project-role {
+      text-align: left;
+    }
+    .project-position {
+      float: right;
+    }
+    .project-name, .project-position {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .navbar-toggle {
+    display: none;
+  }
+  .navbar .navbar-header {
+    float: left;
+    padding: 1.2rem 0 0 0;
+  }
+  .navbar-nav {
+    text-align: right;
+  }
+  .navbar ul {
+    padding-top: 2.5rem;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+  }
+  #about {
+    .university-heading {
+      text-align: left;
+    }
+    .university-logo-iit, .university-logo-vtu {
+      text-align: center;
+    }
+    .grad-details {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+  #contact {
+    .address-details {
+      margin-top: 5%;
+      padding-top: 0;
+    }
+    img {
+      margin-right: 4rem;
+    }
+  }
+  #projects {
+    .professional-experience {
+      .row {
+        .col-md-6:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  #about, #skills, #projects {
+    padding: 4rem 4rem 0;
+  }
+  #contact {
+    padding: 4rem 0 0;
+  }
+}

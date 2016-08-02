@@ -1,0 +1,89 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html" ng-app="portfolioApp" lang="en" xml:lang="en">
+<head>
+    <title>Ashwath Suresh Hegde - Portfolio</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ashwath Suresh Hegde is highly professional and talented Full-Stack AngularJS Developer with more than 1.5 years of professional IT. Experience.">
+    <meta name="keywords" content="Ashwath Suresh Hegde, AngularJS Developer, Full Stack Developer, Chicago">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <base href="/">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <link rel='shortcut icon' href='images/favicon.png' type='image/x-icon'/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+    <div id="site-wrap">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="nav=icon" ui-sref="home">
+                    <div>
+                        <img src="images/favicon.png" alt="Ashwath Suresh Hegde">
+                        <div class="headertext">
+                            <p class="name">Ashwath Suresh Hegde</p>
+                            <p class="position">U I / U X &nbsp;&nbsp; D E V E L O P E R</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" style="height: auto;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in" is-active-nav ui-sref="home" class="nav-btn">Home</li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in" is-active-nav ui-sref="about" class="nav-btn">About Me</li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in" is-active-nav ui-sref="skills" class="nav-btn">Skills</li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in" is-active-nav ui-sref="projects" class="nav-btn">Experience/Projects</li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in" is-active-nav ui-sref="contact" class="nav-btn">Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div id="main-content" aria-labelledby="main-heading">
+            <div ui-view id="views"></div>
+        </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular-loader/angular-loader.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/AngularJS-Toaster/toaster.min.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyClC6D9eXQfgg6n3thGNwK6cp8eFYo5u1Y"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+    <script src="scripts/app.module.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/projects.controller.js"></script>
+    <script src="scripts/controllers/contact.controller.js"></script>
+    <script src="scripts/services/postEmailForm.service.js"></script>
+    <script src="scripts/directives/isActiveNav.directive.js"></script>
+    <script src="scripts/directives/phoneInput.directive.js"></script>
+    <script src="scripts/filters/phoneInput.filter.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    </script>
+</body>
+</html>

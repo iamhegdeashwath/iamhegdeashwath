@@ -1,0 +1,7 @@
+<div ng-controller="HomeController" id="home" class="vcenter">
+    <div uib-carousel interval="myInterval" active="active"  no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="max-height:690px; margin:0 auto;">
+        </div>
+    </div>
+</div>
