@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "description": "A starter project for AngularJS",
+  "description": "A Portfolio in AngularJS",
   "version": "0.0.0",
   "moduleName": "portfolioApp",
   "private": true,

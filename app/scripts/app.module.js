@@ -10,7 +10,7 @@
         'uiGmapgoogle-maps',
         'nemLogging',
         'toaster'
-    ]).config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    ]).config(['$stateProvider','$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {
@@ -42,7 +42,7 @@
                 url: '/postEmail'
             });
         $locationProvider.html5Mode(true);
-    }).run(["$rootScope", "$anchorScroll", '$uibModalStack', '$browser', '$location', '$window', function ($rootScope, $anchorScroll, $uibModalStack, $browser, $location, $window) {
+    }]).run(["$rootScope", "$anchorScroll", '$uibModalStack', '$browser', '$location', '$window', function ($rootScope, $anchorScroll, $uibModalStack, $browser, $location, $window) {
         $browser.baseHref = function () { return "/" };
         $window.ga('create', 'UA-80990628-1', 'auto');
         $rootScope.$on("$stateChangeSuccess", function () {
