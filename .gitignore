@@ -2,9 +2,11 @@ logs/*
 !.gitkeep
 node_modules/
 app/bower_components/
+app/dist/
 app/styles/app.css
 app/styles/app.css.map
 tmp
 .jshintrc
 .DS_Store
 .idea
+.sass-cache
