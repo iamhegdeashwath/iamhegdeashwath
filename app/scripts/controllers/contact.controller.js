@@ -1,7 +1,9 @@
 (function(){
     'use strict';
 
-    angular.module('portfolioApp').controller('ContactController', ['$scope','postEmailFormService','toaster', function($scope, postEmailFormService, toaster){
+    angular.module('portfolioApp').controller('ContactController', ['$scope','emailPhoneCheckService','postEmailFormService','toaster', function($scope, emailPhoneCheckService, postEmailFormService, toaster){
+        var email_access_key = '055b4c363c75c672f7987f337d0f0e09';
+        var phone_access_key = '3fdeade8127e3f6fcca411282034f01a';
         $scope.map = {
             center: {
                 latitude: 41.831924,
@@ -32,12 +34,37 @@
                     contactPhone: formData.contactPhone,
                     contactMessage: formData.contactMessage
                 });
-                postEmailFormService.postEmailFormServiceCall(emailData).then(function (response){
-                        if(response) {
-                            $scope.pop();
-                            $scope.contactForm.$setPristine();
-                            $scope.formData = {};
-                        }
+
+                emailPhoneCheckService.emailExistenceCheckServiceCall(email_access_key, emailData.contactEmail).then(function (response){
+                    $scope.emailResponse = response;
+                        emailPhoneCheckService.phoneNumberCheckServiceCall(phone_access_key, emailData.contactPhone).then(function (response){
+                            $scope.phoneResponse = response;
+                            if($scope.phoneResponse.valid === true && $scope.emailResponse.smtp_check === true) {
+                                    postEmailFormService.postEmailFormServiceCall(emailData).then(function (response){
+                                            if(response) {
+                                                $scope.popThankYouMessage();
+                                                $scope.contactForm.$setPristine();
+                                                $scope.formData = {};
+                                            }
+                                        },
+                                        function(error){
+                                            console.log(error);
+                                        }
+                                    );
+                                }
+                                else {
+                                    if($scope.emailResponse.smtp_check !== true) {
+                                        toaster.pop('error', 'Don\'t Try To Spam', "Give Correct Email Address");
+                                    }
+                                    if($scope.phoneResponse.valid !== true) {
+                                        toaster.pop('error', 'Don\'t Try To Spam', "Give Correct Phone Number");
+                                    }
+                                }
+                            },
+                            function(error){
+                                console.log(error);
+                            }
+                        );
                     },
                     function(error){
                         console.log(error);
@@ -49,7 +76,7 @@
             }
         };
 
-        $scope.pop = function(){
+        $scope.popThankYouMessage = function(){
             toaster.pop('note', "Thank you!", "Your Message has been sent.");
         };
     }]);

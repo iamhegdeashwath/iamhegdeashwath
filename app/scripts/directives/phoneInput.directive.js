@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('portfolioApp').directive('phoneInput', function($filter, $browser) {
+    angular.module('portfolioApp').directive('phoneInput', ['$filter','$browser', function($filter, $browser) {
         return {
             require: 'ngModel',
             link: function($scope, $element, $attrs, ngModelCtrl) {
@@ -36,5 +36,5 @@
                 });
             }
         };
-    });
+    }]);
 })();
