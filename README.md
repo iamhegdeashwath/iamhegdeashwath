@@ -8,7 +8,7 @@ To get you started you can simply clone the Portfolio repository and install the
 
 ### Prerequisites
 
-You need git to clone the angular-seed repository. You can get git from
+You need git. You can get/install git from
 [http://git-scm.com/](http://git-scm.com/).
 
 We also use a number of bower packages and node.js tools to initialize and run Portfolio application. 
