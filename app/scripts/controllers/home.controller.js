@@ -11,7 +11,7 @@
         $scope.addSlide = function() {
             var newWidth = 600 + slides.length + 1;
             slides.push({
-                image: 'images/carousel_images/image1.JPG',
+                image: 'images/carousel_images/image1.jpg',
                 text: 'image1',
                 id: currIndex++
             });
@@ -21,12 +21,12 @@
                 id: currIndex++
             });
             slides.push({
-                image: 'images/carousel_images/image3.JPG',
+                image: 'images/carousel_images/image3.jpg',
                 text: 'image3',
                 id: currIndex++
             });
             slides.push({
-                image: 'images/carousel_images/image4.JPG',
+                image: 'images/carousel_images/image4.jpg',
                 text: 'image4',
                 id: currIndex++
             });
