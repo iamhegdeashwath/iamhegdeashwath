@@ -48,7 +48,9 @@
                                             }
                                         },
                                         function(error){
-                                            console.log(error);
+                                            toaster.pop('error', "Oops!", "Try Again, Something went wrong");
+                                            $scope.contactForm.$setPristine();
+                                            $scope.formData = {};
                                         }
                                     );
                                 }
@@ -62,11 +64,13 @@
                                 }
                             },
                             function(error){
+                                toaster.pop('error', "Oops!", "Try Again, Something went wrong");
                                 console.log(error);
                             }
                         );
                     },
                     function(error){
+                        toaster.pop('error', "Oops!", "Try Again, Something went wrong");
                         console.log(error);
                     }
                 );
