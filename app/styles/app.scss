@@ -265,14 +265,10 @@ html, body {
       padding-top: 3rem;
       padding-bottom: 1.5rem;
     }
-    .egen {
-      margin-top: 2rem;
-      margin-bottom: 1.5rem;
-      width: 80px;
-      height: 80px;
-    }
     .edla {
       width: 250px;
+      padding-top: 5rem;
+      padding-bottom: 1.5rem;
     }
     .work-description {
       text-align: justify;
@@ -293,6 +289,7 @@ html, body {
     }
   }
   .academic-projects {
+    margin-top: 8%;
     div {
       padding-top: 1.5rem;
       font-family: $header_font;
@@ -338,9 +335,6 @@ html, body {
       margin: 0;
       font-weight: bold;
     }
-    h3.egen {
-      margin-left: -1rem;
-    }
     h5 {
       margin: 0.5rem 0 0 0;
       font-family: $header_font;
@@ -355,10 +349,6 @@ html, body {
       margin: 1.5rem 0;
       width: 200px;
       height: 30px;
-    }
-    img.egen-company-logo {
-      width: 50px;
-      height: 50px;
     }
     .company-header, .company-logo {
       text-align: center;
