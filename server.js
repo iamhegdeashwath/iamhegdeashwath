@@ -5,10 +5,12 @@ var nodeMailer = require('nodemailer');
 var app = express();
 
 var smtpTransport = nodeMailer.createTransport("SMTP",{
-    service: "Gmail",
+    host: 'smtp.1and1.com',
+    secureConnection: true,
+    port: 465,
     auth: {
-        user: "<Login_Email_Address>",
-        pass: "<Login_Password>"
+        user: "<Username>",
+        pass: "<Password>"
     }
 });
 
@@ -27,9 +29,10 @@ app.get('*', function(req, res){
 app.post('/postEmail',function(req,res){
     var data = req.body;
     var mailOptions={
-        to : 'hegde.ashwath1@gmail.com',
+        from: data.contactEmail,
+        to : 'ashwath.sureshhegde@iamhegdeashwath.com',
         subject : 'iamHegdeAshwath - Lets get in touch now!',
-        html: '<div style="font-family: cursive; font-size: 14px">' +
+        html: '<div style="font-size: 14px">' +
                 '<span><span style="font-weight: bold">Full Name: </span>' + data.contactName + '</span><br><br>' +
                 '<span><span style="font-weight: bold">Contact Email: </span>' + data.contactEmail + '</span><br><br>' +
                 '<span><span style="font-weight: bold">Contact Phone: </span>' + data.contactPhone + '</span><br><br>' +
@@ -38,18 +41,20 @@ app.post('/postEmail',function(req,res){
     };
     smtpTransport.sendMail(mailOptions, function(error, response){
         if(error){
-            console.log(error);
+            console.log("1st" + error);
             res.end("error");
         }else{
             res.end("sent");
             var mailOptions={
-                from : 'hegde.ashwath1@gmail.com',
+                from : 'ashwath.sureshhegde@iamhegdeashwath.com',
                 to: data.contactEmail,
                 subject : 'Re: iamHegdeAshwath - Lets get in touch now!',
-                html: '<div style="font-family: cursive; font-size: 14px">' +
+                html: '<div style="font-size: 14px">' +
                         '<span>Thank you for leaving me a message. Your Message is important to me, will contact you at the earliest.</span><br><br>' +
-                        '<b>Regards</b>' +
-                        '<p>Ashwath Suresh Hegde</p>' +
+                        '<b style="color: rgb(11, 83, 148);">Regards</b><br>' +
+                        '<b style="color: black">Ashwath Suresh Hegde</b><br>' +
+                        '<a href="http://iamhegdeashwath.com" target="_blank"><b>http://iamhegdeashwath.com</b></a><br>' +
+                        '<span>Phone: +1 (312) 972 - 9557</span>' +
                       '</div>'
             };
             smtpTransport.sendMail(mailOptions, function(error, response){
